@@ -4,33 +4,112 @@
   color: #F5EDE4;
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   line-height: 1.6;
+  scroll-behavior: smooth;
 }
+
+/* ---------- top bar ---------- */
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.65rem 1.25rem;
+  background: rgba(20, 16, 12, 0.92);
+  border-bottom: 1px solid #2c231b;
+  backdrop-filter: blur(6px);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #F5EDE4;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.15rem;
+  letter-spacing: 0.02em;
+}
+
+.brand-star {
+  width: 26px;
+  height: 26px;
+}
+
+.topnav {
+  display: flex;
+  gap: 1.25rem;
+}
+
+.topnav a {
+  color: #BDAFA3;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.topnav a:hover {
+  color: #FFB74D;
+}
+
+/* ---------- layout ---------- */
 
 .page {
   max-width: 62rem;
   margin: 0 auto;
-  padding: 3rem 1.25rem 2rem;
+  padding: 1rem 1.25rem 2rem;
 }
+
+.section {
+  padding: 2.5rem 0 1rem;
+  border-top: 1px solid #2c231b;
+  margin-top: 2rem;
+}
+
+.section h2 {
+  margin: 0 0 0.4rem;
+  font-size: 1.5rem;
+  color: #F5EDE4;
+}
+
+.section-sub {
+  margin: 0 0 1.5rem;
+  color: #BDAFA3;
+  max-width: 38rem;
+}
+
+.badge {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 0.5rem;
+  padding: 0.1rem 0.6rem;
+  border: 1px solid #E69520;
+  border-radius: 999px;
+  color: #FFB74D;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* ---------- hero ---------- */
 
 .hero {
   text-align: center;
-  padding: 2rem 0 2.5rem;
-}
-
-.star {
-  width: 88px;
-  height: 88px;
+  padding: 3.5rem 0 2.5rem;
 }
 
 .hero h1 {
-  margin: 0.5rem 0 0;
-  font-size: clamp(2.2rem, 6vw, 3.2rem);
-  letter-spacing: 0.02em;
+  margin: 0;
+  font-size: clamp(2rem, 5.5vw, 3rem);
+  letter-spacing: 0.01em;
 }
 
 .tagline {
   margin: 0.25rem 0 1rem;
-  font-size: clamp(1.1rem, 3vw, 1.4rem);
+  font-size: clamp(1.05rem, 3vw, 1.3rem);
   color: #FFB74D;
   font-weight: 600;
 }
@@ -62,12 +141,14 @@
   color: #BDAFA3;
 }
 
+/* ---------- app section ---------- */
+
 .shots {
   display: flex;
   justify-content: center;
   gap: 1rem;
   flex-wrap: wrap;
-  padding: 1rem 0 2rem;
+  padding: 0.5rem 0 1.75rem;
 }
 
 .shots img {
@@ -81,7 +162,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
   gap: 1rem;
-  padding: 1rem 0 2rem;
+  padding: 0.5rem 0 1rem;
 }
 
 .feature {
@@ -90,7 +171,7 @@
   padding: 1.1rem 1.25rem;
 }
 
-.feature h2 {
+.feature h3 {
   margin: 0 0 0.4rem;
   font-size: 1.05rem;
   color: #FFB74D;
@@ -102,16 +183,25 @@
   font-size: 0.95rem;
 }
 
+.hardware-note {
+  color: #BDAFA3;
+}
+
+.hardware-note a {
+  color: #FFB74D;
+}
+
+/* ---------- beta ---------- */
+
 .beta {
   background: #221A14;
   border-radius: 12px;
+  border-top: none;
   padding: 1.5rem 1.5rem 1.75rem;
   text-align: center;
-  margin-bottom: 2rem;
 }
 
 .beta h2 {
-  margin: 0 0 0.5rem;
   color: #FFB74D;
 }
 
@@ -144,20 +234,66 @@
   flex-wrap: wrap;
 }
 
+/* ---------- footer ---------- */
+
 .footer {
-  text-align: center;
   color: #BDAFA3;
   font-size: 0.9rem;
-  border-top: 1px solid #3a2f24;
-  padding-top: 1.5rem;
+  border-top: 1px solid #2c231b;
+  margin-top: 2.5rem;
+  padding-top: 1.75rem;
 }
 
-.footer a {
+.footer-cols {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+  gap: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.footer-col a {
+  display: block;
+  color: #BDAFA3;
+  text-decoration: none;
+  margin-bottom: 0.3rem;
+}
+
+.footer-col a:hover {
   color: #FFB74D;
+}
+
+.footer-brand {
+  color: #F5EDE4;
+  font-weight: 700;
+  margin: 0 0 0.3rem;
+}
+
+.footer-col p {
+  margin: 0 0 0.3rem;
+}
+
+.footer-head {
+  color: #F5EDE4;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
 }
 
 .disclaimer {
   max-width: 40rem;
-  margin: 0.75rem auto 0;
   font-size: 0.8rem;
+  margin: 0 0 0.5rem;
+}
+
+.copyright {
+  font-size: 0.8rem;
+  margin: 0 0 1rem;
+}
+
+@media (max-width: 480px) {
+  .topnav {
+    gap: 0.8rem;
+  }
+  .topnav a {
+    font-size: 0.85rem;
+  }
 }

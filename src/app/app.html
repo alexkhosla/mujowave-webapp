@@ -1,43 +1,82 @@
-<main class="page">
-
-  <header class="hero">
-    <svg class="star" viewBox="0 0 108 108" aria-hidden="true">
+<header class="topbar">
+  <a class="brand" href="#top">
+    <svg class="brand-star" viewBox="0 0 108 108" aria-hidden="true">
       <path fill="#E69520" d="M54,14 C58,35 73,50 94,54 C73,58 58,73 54,94 C50,73 35,58 14,54 C35,50 50,35 54,14 Z" />
       <path fill="#FFB74D" d="M54,18 C57.5,37 71,50.5 90,54 C71,57.5 57.5,71 54,90 C50.5,71 37,57.5 18,54 C37,50.5 50.5,37 54,18 Z" />
     </svg>
-    <h1>{{ title() }}</h1>
-    <p class="tagline">Sailing instruments</p>
-    <p class="sub">GPS speed over ground, compass heading, heel and trim.</p>
+    <span>{{ title() }}</span>
+  </a>
+  <nav class="topnav">
+    <a href="#app">App</a>
+    <a href="#hardware">Hardware</a>
+    <a href="#join">Beta</a>
+    <a href="mailto:alexkhosla&#64;gmail.com">Contact</a>
+  </nav>
+</header>
+
+<main class="page" id="top">
+
+  <section class="hero">
+    <h1>Instruments for small-boat sailing</h1>
+    <p class="sub">Mujowave builds bright, glanceable instruments for dinghies and dayboats —
+      a free Android app today, onboard hardware in development.</p>
     <a class="cta" href="#join">Join the free beta</a>
     <p class="cta-note">Android · free · no account, no ads, no tracking</p>
-  </header>
-
-  <section class="shots" aria-label="Screenshots">
-    <img src="img/speed.png" alt="Speed over ground dial showing 5.4 knots with max, average and trend" loading="lazy" />
-    <img src="img/attitude.png" alt="Heel and trim instrument showing 12 degrees of heel" loading="lazy" />
-    <img src="img/heading.png" alt="Compass heading tape showing 237 degrees magnetic" loading="lazy" />
   </section>
 
-  <section class="features">
-    <div class="feature">
-      <h2>Speedometer</h2>
-      <p>An expanded 0–6&nbsp;kn easy to read scale, big digital readout, plus max, 30-second average and trend.</p>
+  <section class="section" id="app">
+    <h2>The Mujowave app</h2>
+    <p class="section-sub">GPS speed over ground, compass heading, heel and trim — readable in
+      sunlight, at a distance, from the wrong end of the boat.</p>
+
+    <div class="shots" aria-label="Screenshots">
+      <img src="img/speed.png" alt="Speed over ground dial showing 5.4 knots with max, average and trend" loading="lazy" />
+      <img src="img/attitude.png" alt="Heel and trim instrument showing 12 degrees of heel" loading="lazy" />
+      <img src="img/heading.png" alt="Compass heading tape showing 237 degrees magnetic" loading="lazy" />
     </div>
-    <div class="feature">
-      <h2>Marine-style heading tape</h2>
-      <p>Magnetic or true at the tap of a button, with a rotating compass tape like the real instrument.</p>
-    </div>
-    <div class="feature">
-      <h2>Heel and trim at a glance</h2>
-      <p>Your boat from astern, with a green target zone, capsize warning marks and a sliding trim indicator.</p>
-    </div>
-    <div class="feature">
-      <h2>Private by design</h2>
-      <p>Works completely offline. Your position never leaves your phone. No accounts, no ads, no tracking.</p>
+
+    <div class="features">
+      <div class="feature">
+        <h3>Speedometer</h3>
+        <p>An expanded 0–6&nbsp;kn easy to read scale, big digital readout, plus max, 30-second average and trend.</p>
+      </div>
+      <div class="feature">
+        <h3>Marine-style heading tape</h3>
+        <p>Magnetic or true at the tap of a button, with a rotating compass tape like the real instrument.</p>
+      </div>
+      <div class="feature">
+        <h3>Heel and trim at a glance</h3>
+        <p>Your boat from astern, with a green target zone, capsize warning marks and a sliding trim indicator.</p>
+      </div>
+      <div class="feature">
+        <h3>Private by design</h3>
+        <p>Works completely offline. Your position never leaves your phone. No accounts, no ads, no tracking.</p>
+      </div>
     </div>
   </section>
 
-  <section class="beta" id="join">
+  <section class="section" id="hardware">
+    <h2>Onboard hardware <span class="badge">in development</span></h2>
+    <p class="section-sub">Rugged Bluetooth devices for the boat itself, designed to pair with
+      the Mujowave app.</p>
+    <div class="features">
+      <div class="feature">
+        <h3>Smart lantern</h3>
+        <p>Bluetooth-controlled onboard light with battery telemetry and runtime estimates.</p>
+      </div>
+      <div class="feature">
+        <h3>Motion &amp; environment sensing</h3>
+        <p>Fixed onboard sensors for attitude, pressure and temperature — mounted to the hull, not your pocket.</p>
+      </div>
+      <div class="feature">
+        <h3>Managed from the app</h3>
+        <p>Pairing, control and over-the-air firmware updates, all from the same Mujowave app.</p>
+      </div>
+    </div>
+    <p class="hardware-note">Interested? <a href="mailto:alexkhosla&#64;gmail.com">Get in touch</a>.</p>
+  </section>
+
+  <section class="section beta" id="join">
     <h2>Join the beta</h2>
     <p>Mujowave is in closed beta — Google requires 12 testers for 14 days before public
       release. Joining is self-service and takes about two minutes. Use the same Google
@@ -59,12 +98,26 @@
   </section>
 
   <footer class="footer">
-    <p>
-      <a href="https://alexkhosla.github.io/mujowave-privacy-policy/">Privacy policy</a>
-      · <a href="mailto:alexkhosla&#64;gmail.com">Contact</a>
-    </p>
+    <div class="footer-cols">
+      <div class="footer-col">
+        <p class="footer-brand">✦ Mujowave</p>
+        <p>Instruments for small-boat sailing.</p>
+      </div>
+      <div class="footer-col">
+        <p class="footer-head">Product</p>
+        <a href="#app">The app</a>
+        <a href="#hardware">Hardware</a>
+        <a href="#join">Beta programme</a>
+      </div>
+      <div class="footer-col">
+        <p class="footer-head">Company</p>
+        <a href="mailto:alexkhosla&#64;gmail.com">Contact</a>
+        <a href="https://alexkhosla.github.io/mujowave-privacy-policy/">Privacy policy</a>
+      </div>
+    </div>
     <p class="disclaimer">Mujowave is not a certified navigation or safety instrument.
       Use at your own risk.</p>
+    <p class="copyright">© 2026 Mujowave</p>
   </footer>
 
 </main>
