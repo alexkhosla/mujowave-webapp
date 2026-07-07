@@ -1,10 +1,65 @@
-<main class="hello">
-  <svg class="star" viewBox="0 0 108 108" aria-hidden="true">
-    <path fill="#E69520" d="M54,14 C58,35 73,50 94,54 C73,58 58,73 54,94 C50,73 35,58 14,54 C35,50 50,35 54,14 Z" />
-    <path fill="#FFB74D" d="M54,18 C57.5,37 71,50.5 90,54 C71,57.5 57.5,71 54,90 C50.5,71 37,57.5 18,54 C37,50.5 50.5,37 54,18 Z" />
-  </svg>
-  <h1>{{ title() }}</h1>
-  <p>Hello, world — sailing instruments for your phone.</p>
+<main class="page">
+
+  <header class="hero">
+    <svg class="star" viewBox="0 0 108 108" aria-hidden="true">
+      <path fill="#E69520" d="M54,14 C58,35 73,50 94,54 C73,58 58,73 54,94 C50,73 35,58 14,54 C35,50 50,35 54,14 Z" />
+      <path fill="#FFB74D" d="M54,18 C57.5,37 71,50.5 90,54 C71,57.5 57.5,71 54,90 C50.5,71 37,57.5 18,54 C37,50.5 50.5,37 54,18 Z" />
+    </svg>
+    <h1>{{ title() }}</h1>
+    <p class="tagline">Sailing instruments for your phone</p>
+    <p class="sub">GPS speed over ground, compass heading, heel &amp; trim — in a bright,
+      high-contrast display built to be read at a distance, in sunlight, from the wrong end of the boat.</p>
+    <a class="cta" href="https://play.google.com/apps/testing/com.mujowave.app">Join the free beta on Google Play</a>
+    <p class="cta-note">Android · free · no account, no ads, no tracking</p>
+  </header>
+
+  <section class="shots" aria-label="Screenshots">
+    <img src="img/speed.png" alt="Speed over ground dial showing 5.4 knots with max, average and trend" loading="lazy" />
+    <img src="img/attitude.png" alt="Heel and trim instrument showing 12 degrees of heel" loading="lazy" />
+    <img src="img/heading.png" alt="Compass heading tape showing 237 degrees magnetic" loading="lazy" />
+  </section>
+
+  <section class="features">
+    <div class="feature">
+      <h2>Speed that reads in light air</h2>
+      <p>An expanded 0–6&nbsp;kn scale, big digital readout, plus max, 30-second average and trend.</p>
+    </div>
+    <div class="feature">
+      <h2>Marine-style heading tape</h2>
+      <p>Magnetic or true at the tap of a button, with a rotating compass tape like the real instrument.</p>
+    </div>
+    <div class="feature">
+      <h2>Heel &amp; trim at a glance</h2>
+      <p>Your boat from astern, with a green target zone, capsize marks and a sliding trim indicator.</p>
+    </div>
+    <div class="feature">
+      <h2>Private by design</h2>
+      <p>Works completely offline. Your position never leaves your phone. No accounts, no ads, no tracking.</p>
+    </div>
+  </section>
+
+  <section class="beta">
+    <h2>Help launch it</h2>
+    <p>Mujowave is in closed beta — Google requires 12 testers for 14 days before public release.
+      Joining takes two minutes:</p>
+    <ol>
+      <li>Open the beta link on your Android phone, signed into your usual Google account</li>
+      <li>Tap <em>Become a tester</em>, then install from Google Play</li>
+      <li>Keep it installed for a couple of weeks — and go sailing with it!</li>
+    </ol>
+    <a class="cta" href="https://play.google.com/apps/testing/com.mujowave.app">Become a tester</a>
+  </section>
+
+  <footer class="footer">
+    <p>
+      <a href="https://alexkhosla.github.io/mujowave-privacy-policy/">Privacy policy</a>
+      · <a href="mailto:alexkhosla&#64;gmail.com">Contact</a>
+    </p>
+    <p class="disclaimer">Mujowave is a training and situational-awareness aid, not a certified
+      navigation, safety or emergency instrument. Always sail within your abilities and carry
+      appropriate safety equipment.</p>
+  </footer>
+
 </main>
 
 <router-outlet />
