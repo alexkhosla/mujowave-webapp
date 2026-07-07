@@ -1,9 +1,10 @@
 name: Deploy to GitHub Pages
 
-# Manual deploys only: pushing to main does NOT publish. To put the current
-# main live, go to the repo's Actions tab -> "Deploy to GitHub Pages" ->
-# "Run workflow".
+# Every push to main deploys. Pushing is the publish gate: commit freely,
+# push when the change should go live.
 on:
+  push:
+    branches: [main]
   workflow_dispatch:
 
 permissions:
