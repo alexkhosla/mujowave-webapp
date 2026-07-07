@@ -336,3 +336,9 @@ body {
 .legal a {
   color: #FFB74D;
 }
+
+/* Standalone route pages: no divider under the top bar. */
+.standalone {
+  border-top: none;
+  margin-top: 0.5rem;
+}
