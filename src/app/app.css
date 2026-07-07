@@ -1,0 +1,27 @@
+.hello {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  background: #14100C;
+  color: #F5EDE4;
+  font-family: system-ui, sans-serif;
+  text-align: center;
+}
+
+.star {
+  width: 96px;
+  height: 96px;
+}
+
+.hello h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+.hello p {
+  margin: 0;
+  color: #BDAFA3;
+}
