@@ -29,6 +29,13 @@ jobs:
       - run: npm run build
       # SPA fallback: unknown paths serve the app so Angular routing works.
       - run: cp dist/mujowave-webapp/browser/index.html dist/mujowave-webapp/browser/404.html
+      # Real files for known routes so they return HTTP 200 (the Play Console
+      # and other link checkers reject a privacy URL that answers 404).
+      - run: |
+          for r in app hardware beta privacy; do
+            mkdir -p "dist/mujowave-webapp/browser/$r"
+            cp dist/mujowave-webapp/browser/index.html "dist/mujowave-webapp/browser/$r/index.html"
+          done
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist/mujowave-webapp/browser
