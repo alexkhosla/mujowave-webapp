@@ -73,6 +73,7 @@ body {
   margin-top: 2rem;
 }
 
+.section h1,
 .section h2 {
   margin: 0 0 0.4rem;
   font-size: 1.5rem;
@@ -207,6 +208,7 @@ body {
   text-align: center;
 }
 
+.beta h1,
 .beta h2 {
   color: #FFB74D;
 }
