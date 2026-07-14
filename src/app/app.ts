@@ -28,7 +28,9 @@ export class App {
   // prerendering too, so each static page is emitted with its own values.
   private updateSeoTags(url: string): void {
     const path = url.split(/[?#]/)[0];
-    const canonical = ORIGIN + (path === '/' ? '/' : path);
+    // Trailing-slash form: GitHub Pages serves routes as directories and
+    // 301s the slashless URL, so the slashed URL is the one search engines land on.
+    const canonical = ORIGIN + (path === '/' ? '/' : `${path}/`);
 
     let link = this.document.head.querySelector<HTMLLinkElement>('link[rel="canonical"]');
     if (!link) {
