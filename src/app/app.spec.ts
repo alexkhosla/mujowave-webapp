@@ -21,6 +21,7 @@ describe('App', () => {
     await fixture.whenStable();
     const el = fixture.nativeElement as HTMLElement;
     expect(el.querySelector('.brand')?.textContent).toContain('Mujowave');
-    expect(el.querySelector('.topnav')?.textContent).toContain('Beta');
+    expect(el.querySelector('.topnav')?.textContent).toContain('Hardware');
+    expect(el.querySelector('.topnav')?.textContent).not.toMatch(/App|Beta/);
   });
 });
